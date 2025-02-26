@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/input.css" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="p-1 bg-[#f6f7fa] flex justify-center">
+        <div class="container mx-auto flex flex-wrap justify-between items-center text-center">
+          <ul class="flex  w-full md:w-auto justify-center md:justify-start">
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >Tap.az</a
+              >
+            </li>
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >Bina.az</a
+              >
+            </li>
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >Boss.az</a
+              >
+            </li>
+          </ul>
+
+          <span class="text-black text-xs md:text-sm w-full md:w-auto mt-1 md:mt-0 text-center text-[13px]">
+            Dəstək: <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""> (012) 526-47-47</a>
+        </span>
+
+          <ul class="flex w-full md:w-auto justify-center md:justify-end mt-1 md:mt-0">
+            
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >Yardim</a
+              >
+            </li>
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >RU</a
+              >
+            </li>
+            <li class="px-3">
+              <a class="text-[13px] text-[#8d94ad] hover:text-red-800" href=""
+                >♡ Favorite</a
+              >
+            </li>
+            <li class="px-3">
+              <a class="text-[14px] text-[#8d94ad] hover:text-red-800" href="">
+                <i class="fa-regular fa-user"></i> Giris</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-[#ca1016] py-2">
+        <div class="container px-3 flex gap-8 justify-between items-center">
+          <div class="flex justify-between items-center gap-8 relative">
+            <h1 class="text-white font-bold text-[18px]">TURBO.AZ</h1>
+            <ul class="hidden md:flex gap-3">
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Butun elanlar</a
+                >
+              </li>
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Dilerler</a
+                >
+              </li>
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Avtokataloq</a
+                >
+              </li>
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Moto</a
+                >
+              </li>
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Ehtiyat hisseler ve aksesuarlar</a
+                >
+              </li>
+              <li>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href=""
+                  >Icare</a
+                >
+              </li>
+            </ul>
+
+            <button id="menu-button" class="text-white text-2xl md:hidden relative">
+                ☰
+            </button>
+
+            <div id="mobile-menu" class="hidden absolute top-full left-30 w-full bg-red-700 text-white p-4 flex flex-col space-y-2 md:hidden">
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">Bütün elanlar</a>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">Dilerlər</a>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">Avtokataloq</a>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">Moto</a>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">Ehtiyat hissələr və aksesuarlar</a>
+                <a class="text-[13px] text-white hover:text-[#f5cecd]" href="#">İcarə</a>
+            </div>
+        </nav>
+          </div>
+          <button
+            class="text-[12px] text-white flex justify-center items-center bg-[#7ed321] hover:bg-[#85c01f] p-1 border-0 rounded-[5px] gap-2 p-2"
+          >
+            <i
+              class="fa-solid fa-plus text-[12px] border border-white rounded-full w-3 h-3"
+            ></i>
+            <span> Yeni Elan </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container bg-[#ebedf3]">
+        <div class="max-w-4xl mx-auto   p-4   "> 
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3"> 
+                <select class="border border-gray-300 p-2 rounded-md">
+                    <option>Marka</option>
+                </select>
+     
+                <select class="border border-gray-300 p-2 rounded-md">
+                    <option>Model</option>
+                </select>
+     
+                <select class="border border-gray-300 p-2 rounded-md">
+                    <option>Şəhər</option>
+                </select>
+     
+                <select class="border border-gray-300 p-2 rounded-md">
+                    <option>Ban növü</option>
+                </select>
+     
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="Qiymət, min." class="border border-gray-300 p-2 rounded-md w-1/2">
+                    <input type="text" placeholder="maks." class="border border-gray-300 p-2 rounded-md w-1/2">
+                </div>
+     
+                <select class="border border-gray-300 p-2 rounded-md">
+                    <option>AZN</option>
+                </select>
+     
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="İl, min." class="border border-gray-300 p-2 rounded-md w-1/2">
+                    <input type="text" placeholder="maks." class="border border-gray-300 p-2 rounded-md w-1/2">
+                </div>
+     
+                <div class="flex space-x-2">
+                    <button class="border border-gray-300 p-2 rounded-md w-1/2">Kredit</button>
+                    <button class="border border-gray-300 p-2 rounded-md w-1/2">Barter</button>
+                </div>
+            </div>
+     
+            <div class="flex space-x-2 mt-3">
+                <button class="bg-[#ca1016] text-white px-4 py-2 rounded-md">Hamısı</button>
+                <button class="border border-gray-300 px-4 py-2 rounded-md">Yeni</button>
+                <button class="border border-gray-300 px-4 py-2 rounded-md">Sürülmüş</button>
+            </div>
+     
+            <div class="flex flex-col md:flex-row md:justify-between mt-4">
+                <span class="text-sm text-gray-600">Bu gün: <a href="#" class="text-blue-600">1293 yeni elan</a></span>
+                <div class="flex space-x-3 mt-2 md:mt-0">
+                    <button class="text-[#ca1016]">Sıfırla</button>
+                    <button class="text-[#ca1016] flex items-center">
+                        Daha çox filtr <span class="ml-1">▼</span>
+                    </button>
+                    <button class="bg-[#ca1016] text-white px-4 py-2 rounded-md">Elanları göstər</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
