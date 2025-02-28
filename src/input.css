@@ -3,7 +3,7 @@
 
 /* ! RESPPONSIVE CONTAINER */
 .container {
-    width: 970px;
+    width: 900px;
     margin: 0 auto;
   }
   
@@ -25,8 +25,12 @@
     }
   }
   
-  @media only screen and (max-width:576px) {
+  @media only screen and (max-width:390px) {
     .container {
+      width: 100%;
+    }
+
+    article{
       width: 100%;
     }
   }
