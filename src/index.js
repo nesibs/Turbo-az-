@@ -1,7 +1,7 @@
 const data = [
     // Buraya JSON məlumatları əlavə edin
 
-    {
+{    
         brand: "Abarth",
         model: "Seltos",
         banType: "Offroader / SUV",
