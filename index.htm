@@ -191,19 +191,24 @@
     </header>
     <main>
       <div class="container h-12 bg-[#f1f3f7] border-b border-[#eaebf2] flex items-center"><h2 class="px-6 font-semibold"> PREMIUM ELANLAR </h2></div>
-      <div id="content" class="container mt-1  flex flex-wrap justify-center items-center gap-3 py-6 px-6 bg-[#f6f7fa]  "></div>
+      <div id="content" class="container mt-1  flex flex-wrap justify-center items-center gap-3 py-6 px-6 bg-[#f6f7fa]  ">
+        
+      </div>
+      
+      <div class="container text-center">
+          <button onclick="artir()" id="btn-2" class="p-2 px-3 bg-[#ca1016] text-white border rounded-[10px]">See More</button>
+      </div>
+ 
+    
     </main>
 
 
 
     <script>
-        const menuButton = document.getElementById("menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
+       
     </script>
-    <script src="./src/index.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="js/header.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
