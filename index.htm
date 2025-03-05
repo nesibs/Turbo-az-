@@ -131,44 +131,73 @@
       <div class="container bg-[#ebedf3]">
         <div class="max-w-4xl mx-auto p-4 "> 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 content-center"> 
-                <select class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
+                <select onchange="handleSelect(this)" onclick="filtir()" id="marka" name="brand" class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
                     <option>Marka</option>
+                    <option onclick="sifirla(0)" disabled>sifirla</option>
                 </select>
      
-                <select class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
+                <select id="model" onchange="handleSelect(this)" onclick="filtir()" name="model" class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
                     <option>Model</option>
+                    <option onclick="sifirla(1)" disabled>sifirla</option>
+
                 </select>
 
-                <div class="flex flex-wrap sm:flex-nowrap border border-gray-300 rounded-md text-[15px]   bg-[#fdfdfd]">
+               <div class="flex flex-wrap sm:flex-nowrap border border-gray-300 rounded-md text-[15px]   bg-[#fdfdfd]">
                   <button class="bg-[#ca1016] text-white px-2 py-2 rounded-bl-md rounded-tl-md w-1/3 ">Hamısı</button>
                   <button class="border-l border-gray-300 px-4 py-2 w-1/3 ">Yeni</button>
                   <button class="border-l border-gray-300 px-2 py-2 w-1/3 ">Sürülmüş</button>
-              </div>
+              </div> 
 
-                <select class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
+                <select   id="city"
+                onchange="handleSelect(this)"
+                onclick="filtir()"
+                name="city" class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
                     <option>Şəhər</option>
+                    <option onclick="sifirla(2)">sifirla</option>
                 </select>
      
                 <div class="flex space-x-2 flex-wrap sm:flex-nowrap">
-                  <input type="text" placeholder="Qiymət, min." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
-                  <input type="text" placeholder="maks." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
+                  <input  type="number" placeholder="Qiymət, min." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
+                  <input  type="number" placeholder="maks." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
               </div>
 
                 <div class="flex space-x-2 flex-wrap sm:flex-nowrap">
-                  <select class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd] w-1/3 ">
-                    <option>AZN</option>
+                  <select  id="val"
+                  onchange="handleSelect(this)"
+                  name="currency" class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd] w-1/3 ">
+                    <option hidden>AZN</option>
                 </select>
                   <button class="border border-gray-300 p-2 rounded-md   bg-[#fdfdfd] w-1/3 ">Kredit</button>
                   <button class="border border-gray-300 p-2 rounded-md   bg-[#fdfdfd] w-1/3 sm:w-1/2 ">Barter</button>
               </div>
               
-              <select class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
+              <select onchange="handleSelect(this)"
+              name="banType"
+              id="ban" class="border border-gray-300 p-2 rounded-md bg-[#fdfdfd]">
                 <option>Ban növü</option>
+              <option onclick="sifirla(4)">sifirla</option>
+
             </select>
      
                 <div class="flex space-x-2 ">
-                    <input type="text" placeholder="İl, min." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
-                    <input type="text" placeholder="maks." class="border border-gray-300 p-2 rounded-md w-1/2 bg-[#fdfdfd]">
+                  <select
+                  onchange="handleSelect(this)"
+                  id="il"
+                  name="year"
+                  class="bg-white cursor-pointer text-[#8d94ad] w-[50%] py-[15px] px-[10px]"
+                >
+                  <option hidden>Il,min.</option>
+                  <option onclick="sifirla(5)">sifirla</option>
+                </select>
+                <select
+                  onchange="handleSelect(this)"
+                  id="maks"
+                  name="year"
+                  class="bg-white cursor-pointer text-[#8d94ad] w-[50%] py-[15px] px-[10px] border-l-1 border-[#dfe3e9]"
+                >
+                  <option hidden>maks.</option>
+                  <option>sifirla</option>
+                </select>
                 </div>
      
               
@@ -181,7 +210,12 @@
                 <div class="flex space-x-3 mt-2 md:mt-0">
                     <button class="text-[#ca1016]">Sıfırla</button>
                     <button class="text-[#ca1016] flex items-center">
-                        Daha çox filtr <span class="ml-1">▼</span>
+                        Daha çox filtr  <svg width="15" height="9" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2.102.125.786 1.4 8.5 8.875 16.214 1.4 14.898.125 8.5 6.325z"
+                            fill="#CA1016"
+                          />
+                        </svg>
                     </button>
                     <button class="bg-[#ca1016] text-white px-4 py-2 rounded-md">Elanları göstər</button>
                 </div>
@@ -191,12 +225,12 @@
     </header>
     <main>
       <div class="container h-12 bg-[#f1f3f7] border-b border-[#eaebf2] flex items-center"><h2 class="px-6 font-semibold"> PREMIUM ELANLAR </h2></div>
-      <div id="content" class="container mt-1  flex flex-wrap justify-center items-center gap-3 py-6 px-6 bg-[#f6f7fa]  ">
+      <div id="content"   id="masinlar" class="container mt-1  flex flex-wrap justify-center items-center gap-3 py-6 px-6 bg-[#f6f7fa]  ">
         
       </div>
       
       <div class="container text-center">
-          <button onclick="artir()" id="btn-2" class="p-2 px-3 bg-[#ca1016] text-white border rounded-[10px]">See More</button>
+          <button onclick="increase()" id="btn" class="p-2 px-3 bg-[#ca1016] text-white border rounded-[10px]">See More</button>
       </div>
  
     

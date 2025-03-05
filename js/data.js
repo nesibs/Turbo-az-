@@ -1,4 +1,4 @@
-const data = [
+let data = [
     // Buraya JSON məlumatları əlavə edin
 
 {    
@@ -834,4 +834,6 @@ const data = [
         city: "Mingecevir",
         dates: " Bu gün  14:30",
       },
-  ];
+];
+  
+       let zapaz = [...data];
